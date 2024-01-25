@@ -1,0 +1,6 @@
+https://datasheets.raspberrypi.com/rpizero2/raspberry-pi-zero-2-w-product-brief.pdf?_gl=1*ll9p85*_ga*MTAzNjY3MDQ5My4xNzA2MTg5MzEy*_ga_22FD70LWDS*MTcwNjE4OTMxMS4xLjAuMTcwNjE4OTMxMS4wLjAuMA..
+https://datasheets.raspberrypi.com/rpizero2/raspberry-pi-zero-2-w-product-brief.pdf
+https://datasheets.raspberrypi.com/
+https://www.raspberrypi.com/documentation/computers/processors.html
+https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#raspberry-pi-zero-2-w
+https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-and-the-40-pin-header
