@@ -1,0 +1,25 @@
+Link: https://www.raspberrypi.com/documentation/computers/processors.html
+Link: https://datasheets.raspberrypi.com/
+
+SPEC:
+-----
+
+The Raspberry Pi RP3A0 is our first System-in-Package (SiP) 
+consisting of a Broadcom BCM2710A1 — which is the silicon die packaged 
+inside the Broadcom BCM2837 chip which is used on the Raspberry Pi 3 — along with 512MB of DRAM.
+
+> Please refer to the following BCM2836 document for details on the ARM peripherals specification, which also applies to the BCM2837
+
+--------------------------------------------------
+--------------------------------------------------
+--------------------------------------------------
+
+In other words the BCM2710A1 is a component within the BCM2837. 
+It refers to the silicon die (the actual integrated circuit) that contains the ARM Cortex-A53 CPU cores.
+So, the BCM2710A1 is a specific part or section of the BCM2837 SoC (System on a Chip).
+
+In summary, the BCM2837 is the entire system-on-chip (SoC), while the BCM2710A1 is a part of the BCM2837, specifically the
+silicon die that contains the CPU cores
+
+
+==> As conclusion see the document of BCM2836 (datasheets) - bcm2836-peripherals.pdf
