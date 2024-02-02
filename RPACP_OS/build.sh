@@ -157,4 +157,4 @@ function parseArguments {
 ################################################################################
 
 # Parse the arguments of the script
-parse_arguments "$@"
+parseArguments "$@"
