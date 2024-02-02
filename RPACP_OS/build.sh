@@ -9,6 +9,7 @@
 # License: GPLv3
 
 # Script arguments:
+#   -h, --help: Print the help message.
 #   -p, --path <path>: The path to build the operating system. Default is "/tmp/RPACP_OS".
 #   -b, --build <recipe>: The recipe to build. Default is "all".
 #   -c, --clean: Clean the build directory.
@@ -77,4 +78,23 @@ function printMessage {
     esac
 
     echo -e "[${timestamp}] - [${PROJECT_FULL_NAME}] - ${color}[${log_level}]${reset_color} - ${message}"
+}
+
+################################################################################
+# Function Name: print_help
+#
+# Description:
+#   This function is used to print the help message.
+#
+# Parameters:
+#
+# Usage:
+#   print_help
+################################################################################
+function printUsage {
+    printMessage $INFO_MESSAGE_TYPE "Usage: ${0} [-h] [-p <path>] [-b <recipe>] [-c]"
+    \t-h: help      - Print this help message
+    \t-p: path      - The path to build the operating system. Default is '/tmp/RPACP_OS'.
+    \t-b: build     - The recipe to build. Default is "all".
+    \t-c: clean     - Clean the build directory."
 }
