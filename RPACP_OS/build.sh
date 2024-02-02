@@ -81,7 +81,7 @@ function printMessage {
 }
 
 ################################################################################
-# Function Name: print_help
+# Function Name: printUsage
 #
 # Description:
 #   This function is used to print the help message.
@@ -89,12 +89,61 @@ function printMessage {
 # Parameters:
 #
 # Usage:
-#   print_help
+#   printUsage
 ################################################################################
 function printUsage {
-    printMessage $INFO_MESSAGE_TYPE "Usage: ${0} [-h] [-p <path>] [-b <recipe>] [-c]"
+    printMessage $INFO_MESSAGE_TYPE "Usage: ${0} [-h] [-p <path>] [-b <recipe>] [-c]
     \t-h: help      - Print this help message
     \t-p: path      - The path to build the operating system. Default is '/tmp/RPACP_OS'.
     \t-b: build     - The recipe to build. Default is "all".
     \t-c: clean     - Clean the build directory."
+}
+
+################################################################################
+# Function Name: parse_arguments
+#
+# Description:
+#   This function is used to parse the arguments of the script.
+#
+# Parameters:
+#
+# Usage:
+#   parse_arguments
+################################################################################
+function parse_arguments {
+    declare opt
+    declare OPTARG
+    declare OPTIND
+
+    # Check if no arguments were passed
+    if [ $# -eq 0 ]; then
+        printMessage $ERROR_MESSAGE_TYPE "No arguments provided. Please specify options."
+        print_help
+        exit 1
+    fi    
+
+    while getopts "hiu" opt; do
+        case ${opt} in
+            h )
+                print_help
+                exit 0
+                ;;
+            i )
+                COMMAND="install"
+                ;;
+            u )
+                COMMAND="uninstall"
+                ;;     
+            \? )
+                printMessage $ERROR_MESSAGE_TYPE "Invalid Option: -$OPTARG"
+                print_help
+                exit 1
+                ;;
+            : )
+                printMessage $ERROR_MESSAGE_TYPE "Invalid Option: -$OPTARG requires an argument"
+                print_help
+                exit 1
+                ;;
+        esac
+    done
 }
