@@ -119,34 +119,23 @@ function parseArguments {
     declare OPTARG
     declare OPTIND
 
-    # Check if no arguments were passed
-    if [ $# -eq 0 ]; then
-        printMessage $ERROR_MESSAGE_TYPE "No arguments provided. Please specify options."
-        print_help
-        exit 1
-    fi    
-
-    while getopts "hiu" opt; do
+    while getopts "hpbc" opt; do
         case ${opt} in
             h )
-                print_help
+                printUsage
                 exit 0
                 ;;
-            i )
-                COMMAND="install"
+
+            p )
+                PATH_TO_BUILD=$OPTARG
                 ;;
-            u )
-                COMMAND="uninstall"
-                ;;     
-            \? )
-                printMessage $ERROR_MESSAGE_TYPE "Invalid Option: -$OPTARG"
-                print_help
-                exit 1
+
+            b )
+                RECIPE_TO_BUILD=$OPTARG
                 ;;
-            : )
-                printMessage $ERROR_MESSAGE_TYPE "Invalid Option: -$OPTARG requires an argument"
-                print_help
-                exit 1
+
+            c )
+                COMMAND="clean"
                 ;;
         esac
     done
