@@ -100,7 +100,7 @@ function printUsage {
 }
 
 ################################################################################
-# Function Name: parse_arguments
+# Function Name: parseArguments
 #
 # Description:
 #   This function is used to parse the arguments of the script.
@@ -108,9 +108,9 @@ function printUsage {
 # Parameters:
 #
 # Usage:
-#   parse_arguments
+#   parseArguments
 ################################################################################
-function parse_arguments {
+function parseArguments {
     declare opt
     declare OPTARG
     declare OPTIND
