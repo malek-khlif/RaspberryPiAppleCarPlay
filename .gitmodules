@@ -1,0 +1,3 @@
+[submodule "RPACP_OS/src/poky"]
+	path = RPACP_OS/src/poky
+	url = git://git.yoctoproject.org/poky
