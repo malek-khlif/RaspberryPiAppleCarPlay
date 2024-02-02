@@ -1,3 +1,6 @@
 [submodule "RPACP_OS/src/poky"]
 	path = RPACP_OS/src/poky
 	url = git://git.yoctoproject.org/poky
+[submodule "RPACP_OS/src/meta-raspberrypi"]
+	path = RPACP_OS/src/meta-raspberrypi
+	url = git://git.yoctoproject.org/meta-raspberrypi
