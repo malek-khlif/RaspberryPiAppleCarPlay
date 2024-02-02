@@ -4,7 +4,7 @@
 # It will build the kernel, the bootloader, and the rootfs.
 
 # Author: Malek Khlif (malek.khlif@outlook.com)
-# Date: 26 Januray 2024
+# Date: 3 February 2024
 # Version: 1.0
 # License: GPLv3
 
