@@ -137,6 +137,24 @@ function parseArguments {
             c )
                 COMMAND="clean"
                 ;;
+
+            \? )
+                printMessage $ERROR_MESSAGE_TYPE "Invalid Option: -$OPTARG"
+                print_help
+                exit 1
+                ;;
+            : )
+                printMessage $ERROR_MESSAGE_TYPE "Invalid Option: -$OPTARG requires an argument"
+                print_help
+                exit 1
+                ;;                
         esac
     done
 }
+
+################################################################################
+# Script start
+################################################################################
+
+# Parse the arguments of the script
+parse_arguments "$@"
