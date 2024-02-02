@@ -9,5 +9,6 @@
 # License: GPLv3
 
 # Script arguments:
-#   -h: help
-#   -c: clean
+#   -p, --path <path>: The path to build the operating system. Default is "/tmp/RPACP_OS".
+#   -b, --build <recipe>: The recipe to build. Default is "all".
+#   -c, --clean: Clean the build directory.
