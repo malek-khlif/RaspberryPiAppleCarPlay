@@ -156,5 +156,11 @@ function parseArguments {
 # Script start
 ################################################################################
 
+#check if OS_MACHINE_CONFIGURED_FILE exists and if not, exit
+if [ ! -f $OS_MACHINE_CONFIGURED_FILE ]; then
+    printMessage $ERROR_MESSAGE_TYPE "The machine is not configured. Please run the setup script first."
+    exit 1
+fi
+
 # Parse the arguments of the script
 parseArguments "$@"
